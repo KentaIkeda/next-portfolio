@@ -6,7 +6,6 @@ import { getData } from '../lib/_contentful/getData';
 export default async function Home() {
 
   const blogs = await getData();
-  console.log(blogs.items[0].fields)
 
   return (
     <div className='grid grid-cols-2 grid-rows-2 w-full h-full gap-2'>

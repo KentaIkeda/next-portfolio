@@ -5,7 +5,6 @@ import React from 'react';
 const Blog = async () => {
 
   const blogs = await getData();
-  console.log(blogs.items[0].sys.id)
 
   return (
     <div className='w-[90%] mx-auto'>

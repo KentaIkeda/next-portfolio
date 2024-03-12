@@ -1,0 +1,8 @@
+#blog-body a {
+  color: #6366F1;
+}
+
+#blog-body a:hover {
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+}
