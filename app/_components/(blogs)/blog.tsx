@@ -6,7 +6,6 @@ import {
 import React from 'react';
 import Link from 'next/link';
 import { notoSansJP } from '@/app/lib/fonts';
-import { Divide } from 'lucide-react';
 
 const Blog = ({
   blogs

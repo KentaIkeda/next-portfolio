@@ -10,7 +10,7 @@ import { useState, useEffect } from 'react';
 // For SideBar
 export const Normal = () => {
   return (
-    <h1 className='text-3xl font-bold'>
+    <h1 className='text-3xl font-bold cursor-default'>
       Portfolio
     </h1>
   );
@@ -29,7 +29,7 @@ export const InNormal = ({ where }: TitleInNormalProps) => {
   }
 
   return (
-    <h2 className='text-3xl font-bold'>
+    <h2 className='text-3xl font-bold cursor-default'>
       {where && (<>{isWhere}</>)}
     </h2>
   );

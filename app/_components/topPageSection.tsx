@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';
 
 const TopPageSection = ({
   children
@@ -6,7 +7,7 @@ const TopPageSection = ({
   children?: React.ReactNode
 }) => {
   return (
-    <div className='border w-full h-full'>
+    <div className='border w-full h-[42.5svh]'>
       {children}
     </div>
   );

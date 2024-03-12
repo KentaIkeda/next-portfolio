@@ -1,14 +1,14 @@
-import { getData } from '@/app/lib/_contentful/getData';
+import { getAllData } from '@/app/lib/_contentful/getData';
 import Link from 'next/link';
 import React from 'react';
 
 const Blog = async () => {
 
-  const blogs = await getData();
+  const blogs = await getAllData();
 
   return (
     <div className='w-[90%] mx-auto'>
-      <ul className='flex flex-wrap justify-start gap-y-7 w-full'>
+      <ul className='flex flex-wrap justify-start gap-y-7 w-full h-full'>
         {blogs.items.map((post: any) => {
 
           let publishedDate;

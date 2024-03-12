@@ -19,7 +19,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className='p-2 bg-light dark:bg-dark text-dark dark:text-light'>
+      <body className='w-full h-full px-2 bg-light dark:bg-dark text-dark dark:text-light'>
         <ThemeProvider
           attribute='class'
           defaultTheme='system'
@@ -27,16 +27,9 @@ export default function RootLayout({
           disableTransitionOnChange
           storageKey='kenta-portfolio'
         >
-          <div className={`${poppins.className} grid grid-cols-6 gap-x-2 h-full`}>
+          <div className={`${poppins.className} grid grid-cols-6 gap-x-2 w-full h-auto`}>
             <SideBar />
-            <main className='border border-red-300 col-span-5 grid grid-rows-5 w-full h-full max-h-screen'>
-              <div id='title' className='w-auto h-[48px] my-5 ml-7 row-span-1'>
-                <Title isInSide /> {/* trueで no text-center */}
-              </div>
-              <div className='row-span-4'>
-                {children}
-              </div>
-            </main>
+            {children}
           </div>
         </ThemeProvider>
       </body>
