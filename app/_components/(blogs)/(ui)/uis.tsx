@@ -7,8 +7,13 @@ const HYPERLINK = ({ link, text }: { link: string, text: React.ReactNode }) => {
     </a>
   );
 }
+const PARAGRAPH = ({ text }: { text: React.ReactNode }) => (
+  <p className='leading-relaxed'>
+    {text}
+  </p>
+);
 const HEADING_1 = ({ text }: { text: React.ReactNode }) => (
-  <h3 className={`text-3xl my-20 ${themeColor}`}>
+  <h3 className={`text-3xl mt-20 mb-10 ${themeColor}`}>
     {text}
   </h3>
 );
@@ -62,6 +67,7 @@ const HR = () => (
 );
 
 export {
+  PARAGRAPH,
   HYPERLINK,
   HEADING_1,
   HEADING_2,

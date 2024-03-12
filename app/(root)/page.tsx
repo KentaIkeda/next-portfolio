@@ -14,7 +14,7 @@ export default async function Home() {
         <Title isInSide /> {/* trueで no text-center */}
       </div>
       <div className='w-full h-auto'>
-        <div className='gap-2 grid grid-cols-2 grid-rows-2 w-full h-full'>
+        <div className='gap-2 grid grid-cols-2 grid-rows-2 w-full h-full xl:grid-cols-1'>
           <TopPageSection>
             <Skills />
           </TopPageSection>

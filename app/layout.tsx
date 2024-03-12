@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import SideBar from './_components/sidebar';
-import Title from './_components/title';
 import { ThemeProvider } from './_components/(themes)/_theme-switch';
 import { poppins } from './lib/fonts';
 import "./globals.css";
-
+import NavProvider from './_components/(mdNav)/navProvider';
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -27,10 +26,11 @@ export default function RootLayout({
           disableTransitionOnChange
           storageKey='kenta-portfolio'
         >
-          <div className={`${poppins.className} grid grid-cols-6 gap-x-2 w-full h-auto`}>
+          <div className={`${poppins.className} grid grid-cols-6 gap-x-2 w-full h-auto xl:grid-cols-7 lg:block`}>
             <SideBar />
             {children}
           </div>
+          <NavProvider />
         </ThemeProvider>
       </body>
     </html>

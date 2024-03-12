@@ -5,7 +5,6 @@ import {
   TitleInNormalProps
 } from '../_types/types';
 import { usePathname } from 'next/navigation';
-import { useState, useEffect } from 'react';
 
 // For SideBar
 export const Normal = () => {
@@ -29,9 +28,9 @@ export const InNormal = ({ where }: TitleInNormalProps) => {
   }
 
   return (
-    <h2 className='text-3xl font-bold cursor-default'>
+    <p className='text-3xl font-bold cursor-default'>
       {where && (<>{isWhere}</>)}
-    </h2>
+    </p>
   );
 }
 
