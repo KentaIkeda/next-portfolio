@@ -13,13 +13,13 @@ const ThemeChanger = () => {
   }, []);
 
   if (!mounted) {
-    return <LoaderIcon size={37} />;
+    return 
+    // <LoaderIcon size={37} />;
   }
-
 
   return (
     <>
-      <div>
+      <div className='h-[30px] w-[30px]'>
         {theme === 'dark' && (
           <button
             className='inline'
