@@ -1,12 +1,10 @@
-'use client';
-
 const SkilllDetail = ({
   children
 }: {
   children: React.ReactNode
 }) => {
   return (
-    <li className='p-1 bg-dark dark:bg-light text-light dark:text-dark rounded-md tracking-wide'>
+    <li className='py-1 px-2 bg-dark dark:bg-light text-light dark:text-dark rounded-md tracking-wide cursor-default'>
       {children}
     </li>
   );

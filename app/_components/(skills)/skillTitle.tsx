@@ -1,5 +1,3 @@
-'use client';
-
 import { SkillTitleProps } from '@/app/_types/types';
 import { notoSansJP } from '@/app/lib/fonts';
 

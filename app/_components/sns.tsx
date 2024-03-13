@@ -1,5 +1,3 @@
-'use client';
-
 const SNS = () => {
   return (
     <div id='github' className='text-dark dark:text-light'>

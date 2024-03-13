@@ -1,8 +1,11 @@
+'use client';
+
 import SkillList from './skillList';
 
 const Skills = () => {
 
-  const available = [
+  // ここに列挙したい技術を書いていく
+  const availableSkills = [
     { id: 1, name: 'HTML' },
     { id: 2, name: 'CSS' },
     { id: 3, name: 'Javascript' },
@@ -11,22 +14,22 @@ const Skills = () => {
     { id: 6, name: 'Gatsby.js' },
     { id: 7, name: 'Contentful' },
   ];
-  const interested = [
+  const interestedSkills = [
     { id: 1, name: 'C#' },
     { id: 2, name: 'HTMX' },
     { id: 3, name: 'Bun' },
     { id: 4, name: 'WordPress' },
   ];
-  const learning = [
+  const learningSkills = [
     { id: 1, name: 'Next.js' }
   ];
 
   return (
     <>
       <div className='flex flex-col h-full justify-center gap-y-7 px-4'>
-        <SkillList data={available} isWhat="available" />
-        <SkillList data={interested} isWhat="interested" />
-        <SkillList data={learning} isWhat="learning" />
+        <SkillList data={availableSkills} isWhat="available" />
+        <SkillList data={interestedSkills} isWhat="interested" />
+        <SkillList data={learningSkills} isWhat="learning" />
       </div>
     </>
   );
