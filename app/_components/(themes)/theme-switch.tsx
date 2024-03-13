@@ -1,7 +1,6 @@
-import { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import { Moon, Sun } from 'lucide-react';
-import LoaderIcon from '../loaderIcon';
 
 const ThemeChanger = () => {
 
@@ -30,20 +29,6 @@ const ThemeChanger = () => {
           }}>
           {theme === 'light' ? MoonIcon : SunIcon}
         </button>
-        {/* {theme === 'dark' && (
-            <button
-              className='inline'
-              onClick={() => setTheme('light')}>
-              <Sun size={30} className='text-yellow-400 hover:scale-110 transition-all' />
-            </button>
-          )}
-          {theme === 'light' && (
-            <button
-              className='inline'
-              onClick={() => setTheme('dark')}>
-              
-            </button>
-          )} */}
       </div>
     </>
   )
