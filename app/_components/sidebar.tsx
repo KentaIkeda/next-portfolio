@@ -5,16 +5,8 @@ import Title from './title';
 import Navigation from './navigation';
 import ThemeChanger from './(themes)/theme-switch';
 import SNS from './sns';
-import { useState, useEffect } from 'react';
-
 
 const SideBar = () => {
-
-  const [isMounted, setIsMounted] = useState(false);
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
   return (
     <div className='sticky top-0 left-0 py-5 h-svh w-full grid grid-flow-row xl:col-span-2 lg:hidden'>
       <div className='text-center h-[48px]'> {/* This `text-center` for Title for Sidebar */}
@@ -27,7 +19,7 @@ const SideBar = () => {
         <Navigation />
       </div>
       <div className='flex items-end justify-center pb-4'>
-        {isMounted && <ThemeChanger />}
+        <ThemeChanger />
       </div>
       <div className='flex items-start justify-center'>
         <SNS />
