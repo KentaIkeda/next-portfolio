@@ -6,10 +6,10 @@ import LoaderIcon from '../loaderIcon';
 const ThemeChanger = () => {
 
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
 
   useEffect(() => {
-    if (!mounted){
+    if (!mounted) {
       setMounted(true);
     }
   }, []);
@@ -17,12 +17,20 @@ const ThemeChanger = () => {
   if (!mounted) {
     return
   }
+  const SunIcon = <Sun size={30} className='text-yellow-400 hover:scale-110 transition-all' />;
+  const MoonIcon = <Moon size={30} className='text-sky-800 hover:scale-110 transition-all' />;
 
   return (
     <>
       <div className='h-[30px] w-[30px]'>
-        <Suspense fallback={<LoaderIcon size={37} />}>
-          {theme === 'dark' && (
+        <button
+          className='inline'
+          onClick={() => {
+            setTheme(resolvedTheme === 'light' ? 'dark' : 'light')
+          }}>
+          {theme === 'light' ? MoonIcon : SunIcon}
+        </button>
+        {/* {theme === 'dark' && (
             <button
               className='inline'
               onClick={() => setTheme('light')}>
@@ -33,10 +41,9 @@ const ThemeChanger = () => {
             <button
               className='inline'
               onClick={() => setTheme('dark')}>
-              <Moon size={30} className='text-sky-800 hover:scale-110 transition-all' />
+              
             </button>
-          )}
-        </Suspense>
+          )} */}
       </div>
     </>
   )
