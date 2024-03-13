@@ -2,20 +2,21 @@ import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import { Moon, Sun } from 'lucide-react';
 import LoaderIcon from '../loaderIcon';
+import React from 'react';
 
 const ThemeChanger = () => {
 
-  const [mounted, setMounted] = useState(false);
+  // const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  // useEffect(() => {
+  //   setMounted(true);
+  // }, []);
 
-  if (!mounted) {
-    return 
-    // <LoaderIcon size={37} />;
-  }
+  // if (!mounted) {
+  //   return 
+  //   // <LoaderIcon size={37} />;
+  // }
 
   return (
     <>
