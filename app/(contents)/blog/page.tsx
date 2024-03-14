@@ -20,7 +20,7 @@ const Blog = async () => {
 
           return (
             <React.Fragment key={post.sys.id}>
-              <li className='w-1/3 xl:w-full'>
+              <li className='mx-auto w-full max-w-3xl lg:w-1/2 xl:mx-0'>
                 <Link href={`/blog/${post.fields.slug}`} className='w-[95%] block'>
                   <div className='w-full group/post bg-light text-dark shadow-cinema shadow-indigo-200 dark:shadow-zinc-950 rounded-md px-4 py-6'>
                     <p className='text-2xl group-hover/post:text-indigo-500 group-hover/post:tracking-wide group-hover/post:underline transition-all line-clamp-1 2xl:text-xl lg:text-lg'>

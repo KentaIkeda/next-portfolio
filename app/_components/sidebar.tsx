@@ -8,7 +8,7 @@ import SNS from './sns';
 
 const SideBar = () => {
   return (
-    <div className='sticky top-0 left-0 py-5 h-svh w-full grid grid-flow-row xl:col-span-2 lg:hidden'>
+    <div className='hidden lg:sticky lg:top-0 lg:left-0 lg:py-5 lg:h-svh lg:w-full lg:grid lg:grid-flow-row lg:col-span-2'>
       <div className='text-center h-[48px]'> {/* This `text-center` for Title for Sidebar */}
         <Title isInSide={false} /> {/* falseでtext-center */}
       </div>

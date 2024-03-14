@@ -6,7 +6,7 @@ const ContentLayout = ({
   children: React.ReactNode
 }) => {
   return ( 
-    <main className='col-span-5 w-full h-auto'>
+    <main className='lg:col-span-4 xl:col-span-5 w-full h-auto'>
       <div className='w-auto h-auto mt-5 ml-7'>
         <Title isInSide /> {/* trueで no text-center */}
       </div>

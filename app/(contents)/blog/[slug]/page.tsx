@@ -46,7 +46,15 @@ const BlogContents = async ({
       <div className={`w-[70%] mx-auto tracking-wide ${S.ulStyle} ${S.olStyle} ${notoSansJP.className}`}>
         {documentToReactComponents(blogBody.items[0].fields.richText, {
           renderNode: {
-            [BLOCKS.PARAGRAPH]: (_, children) => <B.PARAGRAPH text={children}/>,
+            [BLOCKS.PARAGRAPH]: (node, children) => {
+              if (
+                node.content.length === 1 &&
+                (node.content[0] as Text).marks.find((x) => x.type === "code")
+              ) {
+                return <div><pre>{children}</pre></div>;
+              }
+              return <p>{children}</p>;
+            },
             [BLOCKS.HEADING_1]: (_, children) => <B.HEADING_1 text={children} />,
             [BLOCKS.HEADING_2]: (_, children) => <B.HEADING_2 text={children} />,
             [BLOCKS.HEADING_3]: (_, children) => <B.HEADING_3 text={children} />,

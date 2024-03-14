@@ -26,7 +26,7 @@ export default function RootLayout({
           disableTransitionOnChange
           storageKey='kenta-portfolio'
         >
-          <div className={`${poppins.className} grid grid-cols-6 gap-x-2 w-full h-auto xl:grid-cols-7 lg:block`}>
+          <div className={`${poppins.className} lg:grid lg:grid-cols-6 lg:gap-x-2 xl:grid-cols-7 w-full h-auto`}>
             <SideBar />
             {children}
           </div>

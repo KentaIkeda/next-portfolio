@@ -18,28 +18,28 @@ const PARAGRAPH = ({ text }: { text: React.ReactNode }) => {
 const HEADING_1 = ({ text }: { text: React.ReactNode }) => {
   'use client';
   return(
-  <h3 className={`text-3xl mt-20 mb-10 ${themeColor}`}>
+  <h3 className={`text-2xl lg:text-3xl mt-20 mb-10 ${themeColor}`}>
     {text}
   </h3>
 )};
 const HEADING_2 = ({ text }: { text: React.ReactNode }) => {
   'use client';
   return (
-  <h4 className={`text-2xl my-10 ${themeColor}`}>
+  <h4 className={`text-xl lg:text-2xl my-10 ${themeColor}`}>
     {text}
   </h4>
 )};
 const HEADING_3 = ({ text }: { text: React.ReactNode }) => {
   'use client';
   return (
-  <h5 className={`text-xl ${themeColor}`}>
+  <h5 className={`text-lg lg:text-xl ${themeColor}`}>
     {text}
   </h5>
 )};
 const HEADING_4 = ({ text }: { text: React.ReactNode }) => {
   'use client';
   return (
-  <h6 className={`text-lg ${themeColor}`}>
+  <h6 className={`text-base lg:text-lg ${themeColor}`}>
     {text}
   </h6>
 )};

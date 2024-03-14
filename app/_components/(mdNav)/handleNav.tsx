@@ -15,7 +15,7 @@ const HandleNav = ({
   return (
     <button
       onClick={() => setIsModal(!isModal)}
-      className='hidden lg:inline-block fixed z-50 bottom-10 left-1/2 -translate-x-1/2 bg-dark dark:bg-light rounded-full shadow-cinema shadow-indigo-200 dark:shadow-zinc-950 p-2'>
+      className='lg:hidden inline-block fixed z-50 bottom-10 left-1/2 -translate-x-1/2 bg-dark dark:bg-light rounded-full shadow-cinema shadow-indigo-200 dark:shadow-zinc-950 p-2'>
       <svg xmlns="http://www.w3.org/2000/svg"
         width="30" height="30"
         viewBox="0 0 24 24"
