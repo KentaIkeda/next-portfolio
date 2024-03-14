@@ -101,9 +101,9 @@ const BlogContents = async ({
             [MARKS.CODE]: text => <B.CODE text={text} />,
           },
         })}
-      </div>
-      <div>
-        <BackButton />
+        <div className='mt-8'>
+          <BackButton />
+        </div>
       </div>
     </div >
   );

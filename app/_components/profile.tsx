@@ -21,10 +21,10 @@ const Profile = () => {
           alt='Me'
         />
       </figure>
-      <p className='text-2xl font-bold'>
+      <p className='text-2xl font-bold cursor-default'>
         {myInfo.name}
       </p>
-      <p className='font-semibold text-xl'>
+      <p className='font-semibold text-xl cursor-default'>
         {myInfo.age}
       </p>
       <p>

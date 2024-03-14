@@ -7,7 +7,7 @@ const TopPageSection = ({
   children?: React.ReactNode
 }) => {
   return (
-    <div className='border border-dark dark:border-light w-full h-[42.5svh]'>
+    <div className='w-full h-[42.5svh] rounded-md'>
       {children}
     </div>
   );
