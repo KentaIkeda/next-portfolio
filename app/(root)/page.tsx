@@ -5,11 +5,10 @@ import { getData } from '../lib/_contentful/getData';
 import Title from '../_components/title';
 
 export default async function Home() {
-
   const limitedBlogs = await getData();
 
   return (
-    <main className='lg:col-span-4 xl:col-span-5 w-full h-auto lg:flex lg:flex-col lg:justify-between'>
+    <main className='max-w-xl mx-auto lg:max-w-full lg:col-span-4 xl:col-span-5 w-full h-auto lg:flex lg:flex-col lg:justify-between'>
       <div className='w-auto h-auto mt-5 ml-7'>
         <Title isInSide /> {/* trueで no text-center */}
       </div>
@@ -23,7 +22,7 @@ export default async function Home() {
           </TopPageSection>
           <TopPageSection></TopPageSection>
           <TopPageSection></TopPageSection>
-        </div>            
+        </div>
       </div>
     </main>
   );

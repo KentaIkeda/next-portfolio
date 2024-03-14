@@ -1,37 +1,30 @@
-import Image from 'next/image';
-import { getMyAge } from '../lib/utils';
+import Image from "next/image";
+import { getMyAge } from "../lib/utils";
 
 const Profile = () => {
-
   const myInfo = {
-    name: 'Kenta Ikeda',
+    name: "Kenta Ikeda",
     age: getMyAge(),
-    email: 'ikeda.web.develop@gmail.com'
-  }
+    email: "ikeda.web.develop@gmail.com",
+  };
 
   return (
-    <div className='flex flex-col items-center'>
-      <figure className='relative w-20 h-20'>
+    <div className="flex flex-col items-center">
+      <figure className="relative w-20 h-20">
         <Image // Image component has Absolute default
-          src={'/me.jpg'}
+          src={"/me.jpg"}
           fill
           priority
-          className='rounded-full drop-shadow-md'
-          sizes='100vw'
-          alt='Me'
+          className="rounded-full drop-shadow-md"
+          sizes="100vw"
+          alt="Me"
         />
       </figure>
-      <p className='text-2xl font-bold cursor-default'>
-        {myInfo.name}
-      </p>
-      <p className='font-semibold text-xl cursor-default'>
-        {myInfo.age}
-      </p>
-      <p>
-        {myInfo.email}
-      </p>
+      <p className="text-2xl font-bold cursor-default">{myInfo.name}</p>
+      <p className="font-semibold text-xl cursor-default">{myInfo.age}</p>
+      <p>{myInfo.email}</p>
     </div>
   );
-}
+};
 
 export default Profile;
