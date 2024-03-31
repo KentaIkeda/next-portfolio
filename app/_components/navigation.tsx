@@ -32,7 +32,9 @@ const Navigation = () => {
         {pageLists.map((page) => {
           const path = formatPathName(page.name);
           const isActiveColor =
-            path === page.name.toLowerCase() ? 'text-indigo-500' : 'text-light';
+            path === page.name.toLowerCase()
+              ? 'text-indigo-500 dark:text-indigo-500'
+              : 'text-light';
           return (
             <Link
               key={page.id}
