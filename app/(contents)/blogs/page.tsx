@@ -20,7 +20,7 @@ const Blog = async () => {
             <React.Fragment key={post.sys.id}>
               <li className='mx-auto w-full max-w-3xl lg:w-1/2 xl:mx-0'>
                 <Link
-                  href={`/blog/${post.fields.slug}`}
+                  href={`/blogs/${post.fields.slug}`}
                   className='w-full max-w-xl block mx-auto'
                 >
                   <div className='w-full group/post bg-light text-dark shadow-cinema shadow-indigo-200 dark:shadow-zinc-950 rounded-md px-4 py-6'>
