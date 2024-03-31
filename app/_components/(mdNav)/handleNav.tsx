@@ -1,4 +1,3 @@
-import { pageLists } from '../../lib/pageList';
 import React from 'react';
 import { Dispatch, SetStateAction } from 'react';
 import NavForMobile from './(ui)/navForMovile';
@@ -56,6 +55,12 @@ const MDNavigation = ({
   isModal: boolean;
   setIsModal: Dispatch<SetStateAction<boolean>>;
 }) => {
+  const pageLists = [
+    { id: 1, name: 'TOP', href: '/' },
+    { id: 2, name: 'PRODUCTS', href: '/products' },
+    { id: 3, name: 'BLOGS', href: '/blog' },
+  ];
+
   return (
     <>
       {isModal ? (
