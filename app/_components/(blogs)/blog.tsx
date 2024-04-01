@@ -21,9 +21,9 @@ const Blog = ({
 
           return (
             <React.Fragment key={post.sys.id}>
-              <Link href={`blogs/${post.fields.slug}/`}>
+              <Link href={`blog/${post.fields.slug}/`}>
                 <li
-                  className={`${notoSansJP.className} text-2xl shadow-cinema shadow-indigo-200 rounded-md w-[90%] px-4 py-6 mx-auto xl:mx-0`}
+                  className={`${notoSansJP.className} text-2xl shadow-cinema shadow-indigo-200 dark:shadow-zinc-950 rounded-md w-[90%] px-4 py-6 mx-auto xl:mx-0`}
                 >
                   <p className='line-clamp-1'>{post.fields.title}</p>
                   <p className='text-xs mt-0.5'>{publishedDate}</p>

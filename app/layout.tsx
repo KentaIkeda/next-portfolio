@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 import SideBar from './_components/sidebar';
 import { ThemeProvider } from './_components/(themes)/_theme-switch';
 import { poppins } from './lib/fonts';
-import "./globals.css";
+import './globals.css';
 import NavProvider from './_components/(mdNav)/navProvider';
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "This is Portfolio",
+  title: 'Portfolio',
+  description: 'This is Portfolio',
 };
 
 export default function RootLayout({
@@ -15,9 +15,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang='en'
+      suppressHydrationWarning
+    >
       <body className='w-full h-full bg-light dark:bg-dark text-dark dark:text-light'>
         <ThemeProvider
           attribute='class'
@@ -26,7 +28,9 @@ export default function RootLayout({
           disableTransitionOnChange
           storageKey='kenta-portfolio'
         >
-          <div className={`${poppins.className} lg:grid lg:grid-cols-6 lg:gap-x-2 xl:grid-cols-7 w-full h-auto`}>
+          <div
+            className={`${poppins.className} lg:grid lg:grid-cols-6 lg:gap-x-2 xl:grid-cols-7 w-full h-auto`}
+          >
             <SideBar />
             {children}
           </div>

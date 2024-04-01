@@ -2,10 +2,10 @@ import Skills from '../_components/(skills)/skills';
 import Blog from '../_components/(blogs)/blog';
 import TopPageSection from '../_components/topPageSection';
 import { getData } from '../lib/_contentful/getData';
-import Title from '../_components/title';
+import { useMemo } from 'react';
 
 export default async function Home() {
-  const limitedBlogs = await getData();
+  const limitedBlogs = await useMemo(() => getData(), []);
 
   return (
     <main className='w-full h-full max-w-xl mx-auto lg:max-w-full lg:col-span-4 xl:col-span-5 lg:flex lg:flex-col lg:justify-between'>
