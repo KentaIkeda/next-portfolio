@@ -58,13 +58,13 @@ const MDNavigation = ({
   const pageLists = [
     { id: 1, name: 'TOP', href: '/' },
     { id: 2, name: 'PRODUCTS', href: '/products' },
-    { id: 3, name: 'BLOGS', href: '/blog' },
+    { id: 3, name: 'BLOGS', href: '/blogs' },
   ];
 
   return (
     <>
       {isModal ? (
-        <div className='h-screen w-full fixed top-1/2 left-0 -translate-y-1/2 bg-light/50'>
+        <div className='h-screen w-full fixed top-1/2 left-0 -translate-y-1/2 bg-light/80'>
           <nav className='h-full w-full'>
             <ul className='h-full w-full flex flex-col items-center justify-center gap-y-4'>
               {pageLists.map((list) => {

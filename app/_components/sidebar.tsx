@@ -23,7 +23,7 @@ const SideBar = () => {
         <ThemeChanger />
       </div>
       <div className='flex items-start justify-center'>
-        <SNS />
+        <SNS href='https://github.com/Krudaovo' />
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ const NavForMobile = ({
       href={url}
       onClick={() => setIsModal(false)}
     >
-      <button className='text-dark dark:text-light text-lg font-bold tracking-wider'>
+      <button className='text-light dark:text-dark text-lg font-bold tracking-wider'>
         {name}
       </button>
     </Link>

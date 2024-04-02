@@ -28,4 +28,6 @@ export type ProductCardType = {
   isDemo?: boolean;
   isOtherSite: boolean;
   href: string;
+  isGithub: boolean;
+  githubHref: string;
 };
