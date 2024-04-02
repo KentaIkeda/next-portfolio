@@ -21,7 +21,7 @@ const Blog = ({
 
           return (
             <React.Fragment key={post.sys.id}>
-              <Link href={`blog/${post.fields.slug}/`}>
+              <Link href={`blogs/${post.fields.slug}/`}>
                 <li
                   className={`${notoSansJP.className} text-2xl shadow-cinema shadow-indigo-200 dark:shadow-zinc-950 rounded-md w-[90%] px-4 py-6 mx-auto xl:mx-0`}
                 >
