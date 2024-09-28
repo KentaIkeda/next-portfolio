@@ -1,8 +1,7 @@
-'use client';
 import React from 'react';
 
 const TopPageSection = ({ children }: { children?: React.ReactNode }) => {
-  return <div className='w-full h-[42.5svh] rounded-md'>{children}</div>;
+  return <section className='w-full h-[42.5svh]'>{children}</section>;
 };
 
 export default TopPageSection;

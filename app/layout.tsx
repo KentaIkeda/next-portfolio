@@ -6,7 +6,7 @@ import './globals.css';
 import NavProvider from './_components/(mdNav)/navProvider';
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
+  title: '2525KI',
   description: 'This is Portfolio',
 };
 
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang='en'
+      lang='ja'
       suppressHydrationWarning
     >
       <body className='w-full h-full bg-light dark:bg-dark text-dark dark:text-light'>

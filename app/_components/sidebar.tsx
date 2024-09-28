@@ -1,5 +1,3 @@
-'use client';
-
 import Profile from './profile';
 import Title from './title';
 import Navigation from './navigation';
@@ -8,24 +6,18 @@ import SNS from './sns';
 
 const SideBar = () => {
   return (
-    <div className='hidden lg:sticky lg:top-0 lg:left-0 lg:py-5 lg:h-svh lg:w-full lg:grid lg:grid-flow-row lg:col-span-2'>
-      <div className='text-center h-[48px]'>
-        {/* This `text-center` for Title for Sidebar */}
-        <Title isInSide={false} /> {/* falseでtext-center */}
-      </div>
-      <div>
-        <Profile />
-      </div>
-      <div>
+    <header className='mt-12 grid justify-items-center gap-y-4 lg:mt-0 lg:sticky lg:top-0 lg:left-0 lg:h-svh lg:w-ful lg:gap-y-0 lg:items-center  lg:col-span-2'>
+      <Profile />
+      <div className='w-full hidden lg:block'>
         <Navigation />
       </div>
-      <div className='flex items-end justify-center pb-4'>
+      <div className='flex justify-center gap-x-4 '>
         <ThemeChanger />
+        <div className='flex place-items-center'>
+          <SNS href='https://github.com/KentaIkeda' />
+        </div>
       </div>
-      <div className='flex items-start justify-center'>
-        <SNS href='https://github.com/Krudaovo' />
-      </div>
-    </div>
+    </header>
   );
 };
 

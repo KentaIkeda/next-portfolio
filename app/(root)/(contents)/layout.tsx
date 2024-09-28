@@ -1,4 +1,4 @@
-import Title from '../_components/title';
+import Title from '@/app/_components/title';
 
 const ContentLayout = ({ children }: { children: React.ReactNode }) => {
   return (

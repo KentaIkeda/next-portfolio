@@ -6,7 +6,15 @@ export const getMyAge = () => {
   const dateDiff = dateInstance.getDate() - myBirthDay.getDate();
 
   // 誕生日が過ぎていない場合は年齢を1歳引く
-  const age = monthDiff < 0 || (monthDiff === 0 && dateDiff < 0) ? yearDiff - 1 : yearDiff;
+  const age =
+    monthDiff < 0 || (monthDiff === 0 && dateDiff < 0)
+      ? yearDiff - 1
+      : yearDiff;
 
   return age;
+};
+
+export const getFormatDate = (date: string): string => {
+  let formatDate = date.replace(/-/g, '.');
+  return formatDate;
 };

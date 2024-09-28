@@ -27,30 +27,28 @@ const Navigation = () => {
   };
 
   return (
-    <div>
-      <ul className='flex flex-col gap-4'>
-        {pageLists.map((page) => {
-          const path = formatPathName(page.name);
-          const isActiveColor =
-            path === page.name.toLowerCase()
-              ? 'text-indigo-500 dark:text-indigo-500'
-              : 'text-light';
-          return (
-            <Link
-              key={page.id}
-              className='group/nav w-11/12 max-w-80 h-auto mx-auto block'
-              href={page.href}
+    <ul className='flex flex-col gap-4'>
+      {pageLists.map(page => {
+        const path = formatPathName(page.name);
+        const isActiveColor =
+          path === page.name.toLowerCase()
+            ? 'text-indigo-500 dark:text-indigo-500'
+            : 'text-light';
+        return (
+          <Link
+            key={page.id}
+            className='group/nav w-11/12 max-w-80 h-auto mx-auto block'
+            href={page.href}
+          >
+            <li
+              className={`w-full h-full p-4 mx-auto bg-dark dark:bg-light dark:text-dark transition-all rounded-md group-hover/nav:tracking-wider group-hover/nav:text-indigo-500 group-hover/nav:underline text-center text-xl ${isActiveColor}`}
             >
-              <li
-                className={`w-full h-full p-4 mx-auto bg-dark dark:bg-light dark:text-dark transition-all rounded-md group-hover/nav:tracking-wider group-hover/nav:text-indigo-500 group-hover/nav:underline text-center text-xl ${isActiveColor}`}
-              >
-                {page.name}
-              </li>
-            </Link>
-          );
-        })}
-      </ul>
-    </div>
+              {page.name}
+            </li>
+          </Link>
+        );
+      })}
+    </ul>
   );
 };
 
